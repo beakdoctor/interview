@@ -8,4 +8,5 @@
                  [org.clojure/math.combinatorics "0.0.7"]
                  [aysylu/loom "1.0.2"]
                  ]
+  :java-source-paths ["src"]
   :repl-options {:init-ns solutions.core})
