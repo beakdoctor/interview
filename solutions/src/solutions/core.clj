@@ -64,18 +64,11 @@
 
   )
 (my-subsets #{1 2 3})
-(view (l/graph [#{} #{0}]))
 
-(= (my-subsets #{1 1}) #{#{} #{0} #{0 1} #{1}})
-
-(doc loop)
 (defn my-subsets [set]
   (loop [[first & rest] set
          accumulator '(#{})]
     (if first (recur rest (concat accumulator (map #(conj % first) accumulator)))
           accumulator)))
 (my-subsets #{1 2 3})
-=> (#{} #{1} #{3} #{1 3} #{2} #{1 2} #{3 2} #{1 3 2})
-(my-subsets #{1 2 3})
 
-(take 3 combinatorics/alpha-combo)
